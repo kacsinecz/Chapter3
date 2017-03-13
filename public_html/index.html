@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function onLoad() {
+                //console.log(min(30.26,35.2));
+                //console.log(isEven(-16));
+                console.log(countChar("blablablabbhhgg","g"));
+            }
+            
+            function min(x,y) {
+                if(x<y)
+                    return x;
+                else
+                    return y;
+            }
+            
+            function isEven(x) {
+                if(x<0) {
+                    x = -x;
+                }
+                switch(x) {
+                    case 0:
+                        return true;
+                    case 1:
+                        return false;
+                    default:
+                        return isEven(x-2);
+                }
+            }
+            
+            function countChar(text,ch) {
+                var c = 0;
+                for(var i=0;i<text.length;i++) {
+                    if(text.charAt(i) === ch) {
+                        c++;
+                    }
+                }
+                return c;
+            }
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <div>TODO write content</div>
+    </body>
+</html>
